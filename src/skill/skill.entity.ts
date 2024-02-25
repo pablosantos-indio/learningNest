@@ -1,14 +1,14 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
-import { Professional } from '../professional/professional.entity';
+import { ProfessionalEntity } from '../professional/professional.entity';
 
-@Entity()
-export class Skill {
+@Entity("Skill")
+export class SkillEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
   name: string;
 
-  @ManyToMany(() => Professional)
-  professionals: Professional[];
+  @ManyToMany(() => ProfessionalEntity)
+  professionals: ProfessionalEntity[];
 }

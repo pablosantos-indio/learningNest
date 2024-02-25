@@ -5,10 +5,10 @@ import {
   ManyToMany,
   JoinTable,
 } from 'typeorm';
-import { Skill } from '../skill/skill.entity';
+import { SkillEntity } from '../skill/skill.entity';
 
-@Entity()
-export class Professional {
+@Entity("Professional")
+export class ProfessionalEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -18,7 +18,7 @@ export class Professional {
   @Column()
   email: string;
 
-  @ManyToMany(() => Skill)
+  @ManyToMany(() => SkillEntity)
   @JoinTable()
-  skills: Skill[];
+  skills: SkillEntity[];
 }
