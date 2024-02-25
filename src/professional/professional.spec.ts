@@ -1,4 +1,4 @@
-import { Professional } from './professional';
+import { Professional } from './professional.entity';
 
 describe('Professional', () => {
   it('should be defined', () => {
